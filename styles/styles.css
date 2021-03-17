@@ -1,0 +1,279 @@
+:root {
+  --primary: #00ba63;
+  --black: #060606;
+  --white: #ffffff;
+  --grey: #696969;
+  --dark-grey: #333333;
+  --light-grey: #f8f8f8;
+}
+
+/* global */
+
+body {
+  background: var(--white);
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+a {
+  appearance: none;
+  color: var(--black);
+  text-decoration: none;
+  transition: all 300ms ease;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Lora', serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: max(28px, min(-1.14px + 5.06vw, 96px));
+  line-height: max(40px, min(1.43px + 6.7vw, 130px));
+}
+
+h2 {
+  font-size: max(28px, min(5.71px + 3.87vw, 80px));
+  line-height: max(40px, min(10.86px + 5.06vw, 108px));
+}
+
+h3 {
+  font-size: max(28px, min(5.71px + 3.87vw, 64px));
+  line-height: max(30px, min(15.43px + 2.53vw, 64px));
+}
+
+h4 {
+  font-size: max(20px, min(11.86px + 1.41vw, 39px));
+  line-height: max(30px, min(15.43px + 2.53vw, 64px));
+}
+
+h5 {
+  font-size: max(18px, min(12.5px + 1.05vw, 30px));
+  line-height: 1.6;
+}
+
+p {
+  font-size: max(16px, min(13.13px + 0.69vw, 20px));
+  line-height: 1.6;
+  font-size: max(16px, min(13.13px + 0.69vw, 20px));
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* utility */
+
+.text-tiny {
+  font-weight: 200;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.text-sm {
+  font-size: max(16px, min(13.13px + 0.69vw, 20px));
+  line-height: 1.6;
+}
+
+.text-md {
+  font-size: max(18px, min(12.5px + 1.05vw, 30px));
+  line-height: 1.6;
+}
+
+.text-lg {
+  font-size: max(20px, min(11.86px + 1.41vw, 39px));
+  line-height: max(30px, min(15.43px + 2.53vw, 64px));
+}
+
+/* general */
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.content-container {
+  align-items: center;
+  display: grid;
+  gap: 2.369rem;
+  grid-template-columns: minmax(10px, 1fr);
+  margin: 2.369rem 1.777rem;
+}
+
+.cta {
+  background: var(--black);
+  color: var(--white);
+  margin: 0 auto;
+  padding: 1.333rem 1.777rem;
+  text-align: center;
+  width: 50%;
+}
+
+.cta:hover {
+  background: var(--primary);
+}
+
+.card {
+  background: var(--white);
+  display: grid;
+  gap: 1.777rem;
+  padding: 1.777rem;
+  text-align: center;
+}
+
+.card-animation {
+  margin: 0 auto;
+  width: 72px;
+}
+
+.card-animation video {
+  width: 100%;
+}
+
+.logo {
+  min-width: 150px;
+  max-width: 250px;
+}
+
+.logo-img {
+  width: 100%;
+}
+
+/* showcase */
+
+.showcase {
+  min-height: 50vh;
+}
+
+.logo {
+  font-family: 'Lora', serif;
+  margin: 0 auto;
+  padding: 2.369rem 0 0;
+}
+
+.showcase-content {
+  display: grid;
+  gap: 1.777rem;
+  grid-template-columns: minmax(10px, 1fr);
+  justify-content: center;
+  text-align: center;
+}
+
+.showcase-cta {
+  background: var(--primary);
+}
+
+.showcase-cta:hover {
+  background: var(--black);
+}
+
+.showcase-img {
+  width: 100%;
+}
+
+/* demo */
+
+.demo {
+  background: var(--light-grey);
+}
+
+.demo-video {
+  box-shadow: 0 0 25px 5px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+  max-width: 400px;
+}
+
+.v2 {
+  max-width: 1000px;
+}
+
+.demo-video video {
+  width: 100%;
+}
+
+/* about */
+
+.about {
+  background: var(--white);
+}
+
+/* feature */
+
+.feature {
+  background: var(--light-grey);
+}
+
+/* how to */
+
+.how-to {
+  background: linear-gradient(
+    to bottom,
+    var(--white) 25%,
+    var(--light-grey) 25%
+  );
+}
+
+.portrait {
+  border-radius: 50%;
+  margin: 0 auto;
+  width: 148px;
+}
+
+/* footer */
+
+footer .logo {
+  margin-bottom: 2.369rem;
+}
+
+.foot-link {
+  color: var(--grey);
+  white-space: nowrap;
+}
+
+.ref-link {
+  font-size: 0.75rem;
+  margin-top: 2.369rem;
+}
+
+.foot-link:hover {
+  color: var(--black);
+}
+
+/* media queries */
+
+@media (min-width: calc(990px + 2.369rem)) {
+  /* general */
+
+  .content-container {
+    margin: 2.369rem auto;
+    max-width: 1000px;
+  }
+  .card-container {
+    grid-template-columns: repeat(3, minmax(10px, 1fr));
+    max-width: 90%;
+  }
+  .card-container .showcase-content {
+    grid-column: 1 / 4;
+  }
+  .card-container a {
+    grid-column: 1 / 4;
+    max-width: 450px;
+  }
+
+  /* footer */
+
+  footer .content-container {
+    max-width: 80%;
+  }
+
+  footer .showcase-content {
+    align-items: center;
+    grid-template-columns: repeat(5, minmax(10px, min-content));
+    justify-content: space-between;
+  }
+  .ref-link {
+    margin-top: 0;
+  }
+}
