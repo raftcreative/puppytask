@@ -243,7 +243,7 @@ footer .logo {
 
 /* media queries */
 
-@media (min-width: calc(990px + 2.369rem)) {
+@media only screen and (min-width: 1000px) {
   /* general */
 
   .content-container {
